@@ -7,28 +7,26 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:layout_margin="@dimen/size10">
+        android:layout_margin="@dimen/size15">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:padding="@dimen/size10">
 
             <ImageView
-                android:id="@+id/itemIcon"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_gravity="center"
-                android:layout_weight="0.5"
-                android:scaleType="fitXY"
-                android:src="@mipmap/ic_launcher"/>
+                android:id="@+id/itemIconTrailer"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center"
+                android:src="@drawable/play"/>
             <TextView
                 android:layout_margin="@dimen/size10"
-                android:id="@+id/itemTitle"
+                android:id="@+id/itemTitleTrailer"
                 android:textStyle="bold|italic"
                 android:text="..."
                 android:layout_gravity="center"

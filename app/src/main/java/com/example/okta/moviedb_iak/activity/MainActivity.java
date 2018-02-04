@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
         rvPopularMovie = findViewById(R.id.RVPopularMovie);
 
-        getPopularMovie("d5f2a6ecff6d09de0c4abf1b69ea0689","en-US","1");
+        getPopularMovie("d5f2a6ecff6d09de0c4abf1b69ea0689", "en-US", "1");
     }
 
-    private void getPopularMovie(String ApiKey,String language, String Page) {
+    private void getPopularMovie(String ApiKey, String language, String Page) {
         final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
         progressDialog.setMessage("Proses Mengambil Data");
         progressDialog.show();
@@ -60,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
                         public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                             Intent DetailIntent = new Intent(MainActivity.this, DetailActivity.class);
                             Integer id = response.body().getResults().get(position).getId();
+                            String overview = response.body().getResults().get(position).getOverview();
                             DetailIntent.putExtra("id_detail", id);
+                            DetailIntent.putExtra("overview", overview);
                             startActivity(DetailIntent);
                         }
                     });

@@ -7,6 +7,13 @@
     android:orientation="vertical"
     app:theme="@style/ThemeOverlay.AppCompat"
     tools:context=".activity.DetailActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <LinearLayout
         android:background="@color/green"
         android:layout_width="match_parent"
@@ -14,7 +21,7 @@
         android:layout_height="100dp">
         <TextView
             android:id="@+id/TitleDetail"
-            android:text="TITLE"
+            android:text="...."
             android:textSize="25sp"
             android:textColor="@color/white"
             android:layout_marginLeft="@dimen/size15"
@@ -42,7 +49,7 @@
                 android:id="@+id/YearDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2015"
+                android:text="....."
                 android:textSize="25sp"/>
             <TextView
                 android:id="@+id/DurationDetail"
@@ -51,21 +58,22 @@
                 android:layout_width="wrap_content"
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"
-                android:text="150min" />
+                android:text="...." />
             <TextView
                 android:id="@+id/RatingDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="8/10"/>
+                android:text="...."/>
             
             <Button
                 android:layout_marginTop="@dimen/size10"
-                android:layout_width="90dp"
+                android:layout_width="70dp"
                 android:textSize="10sp"
+                android:textColor="@color/white"
                 android:background="@color/green"
                 android:layout_height="wrap_content"
-                android:text="Mark As Favorite"/>
+                android:text="Make As Favorite"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -74,7 +82,7 @@
         android:orientation="vertical">
         <TextView
             android:id="@+id/DescriptionDetail"
-            android:text="Descriprtion"
+            android:text="............"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,4 +94,12 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"/>
     </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvTrailer"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/size15"
+            android:layout_height="200dp">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
